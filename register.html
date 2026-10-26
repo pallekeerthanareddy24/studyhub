@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block title %}Create account — StudyHub{% endblock %}{% block content %}
+<section class="form-wrap"><div class="form-side"><span class="eyebrow">WELCOME TO STUDYHUB</span><h1>Make learning<br><span>feel simpler.</span></h1><p>Create a demo account and become part of a shared learning space.</p><div class="side-quote">“The beautiful thing about learning is that nobody can take it away from you.”</div></div>
+<form class="form-card" method="post"><h2>Create your account</h2><p class="muted">Choose how you want to use StudyHub.</p>
+<label>Full name<input name="name" required placeholder="Your name"></label><label>Email address<input type="email" name="email" required placeholder="you@example.com"></label><label>Password<input type="password" name="password" minlength="8" required placeholder="At least 8 characters"></label>
+<label>Account type<select name="role"><option value="student">Student — view and download notes</option><option value="teacher">Teacher — upload notes</option></select></label>
+<button class="btn primary full" type="submit">Create account →</button><p class="form-bottom">Already registered? <a href="{{ url_for('login') }}">Log in</a></p></form></section>{% endblock %}
